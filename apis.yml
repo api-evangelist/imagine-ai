@@ -1,7 +1,19 @@
 aid: imagine-ai
 name: Imagine Ai
-description: Imagine Ai is a company surfaced as a portfolio company of y-combinator and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Imagine AI (YC F25) is a San Francisco B2B content platform, founded in 2025
+  by Neo Lee and Sky Yang, that reverse-engineers modern B2B growth starting
+  with LinkedIn. It builds a persona-driven AI clone of a founder or executive
+  by deeply analyzing their writing, speaking style, and market context, then
+  uses that persona to plan content strategy, write LinkedIn posts, draft
+  comments and DMs, and schedule coordinated distribution across an executive
+  team (CEO, VP of Sales, Head of Marketing) from a single shared content
+  calendar. Each client is paired with a dedicated content engineer, and the
+  platform tracks engagement-quality analytics and inbound lead generation;
+  early customers include MongoDB, Rippling, and Conduit. Imagine AI is a
+  sales-led SaaS with no public self-serve developer API, SDK, or OpenAPI
+  definition as of this catalog entry — this profile captures the company's
+  identity and public web properties for the API Evangelist network.
 url: https://raw.githubusercontent.com/api-evangelist/imagine-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +21,63 @@ x-backed-by:
 - y-combinator
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/imagine-ai.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- AI
+- Artificial Intelligence
+- B2B
+- Content Marketing
+- LinkedIn
+- Thought Leadership
+- Social Media
+- Lead Generation
+- Persona
+- Y Combinator
+- SaaS
 apis: []
+common:
+- type: DomainSecurity
+  url: security/imagine-ai-domain-security.yml
+- type: Website
+  url: https://www.imagineai.me/
+- type: Blog
+  url: https://www.imagineai.me/blog
+- type: Pricing
+  url: https://www.imagineai.me/pricing
+- type: TermsOfService
+  url: https://www.imagineai.me/user-agreement
+- type: PrivacyPolicy
+  url: https://www.imagineai.me/privacy-policy
+- type: Demo
+  url: https://form.typeform.com/to/wexUi8lH
+- type: LinkedIn
+  url: https://www.linkedin.com/company/ai-imagine/
+- type: X
+  url: https://x.com/imagineagi
+- type: CompanyProfile
+  url: https://www.ycombinator.com/companies/imagine-ai
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
