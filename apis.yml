@@ -10,10 +10,14 @@ description: >-
   team (CEO, VP of Sales, Head of Marketing) from a single shared content
   calendar. Each client is paired with a dedicated content engineer, and the
   platform tracks engagement-quality analytics and inbound lead generation;
-  early customers include MongoDB, Rippling, and Conduit. Imagine AI is a
-  sales-led SaaS with no public self-serve developer API, SDK, or OpenAPI
-  definition as of this catalog entry — this profile captures the company's
-  identity and public web properties for the API Evangelist network.
+  early customers include MongoDB, Rippling, and Conduit. It also publishes
+  Benchmark by Imagine AI, a free public LinkedIn competitor-benchmark dashboard
+  covering 96 companies and 32,500+ analyzed posts with a documented statistical
+  methodology. Imagine AI is a sales-led SaaS — three seat-based tiers, every one
+  a custom quote — with no developer portal, API reference, SDK, MCP server or
+  OpenAPI/AsyncAPI/GraphQL definition published on any host it controls as of
+  August 2026; this profile captures the company's identity and public web
+  properties for the API Evangelist network.
 url: https://raw.githubusercontent.com/api-evangelist/imagine-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -22,20 +26,22 @@ x-backed-by:
 x-tier: stub
 x-tier-reason: portfolio-lead
 accessModel:
-  pricing: unknown
-  onboarding: unknown
+  pricing: quote
+  onboarding: sales
   trial: false
   try_now: false
   public: false
-  label: Unknown
-  confidence: low
-  source: []
-  generated: '2026-07-22'
-  method: derived
+  label: Sales-led — custom quote
+  confidence: medium
+  source:
+  - https://www.imagineai.me/pricing
+  - https://form.typeform.com/to/wexUi8lH
+  generated: '2026-08-13'
+  method: searched
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/imagine-ai.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-13'
 tags:
 - Company
 - AI
@@ -71,13 +77,72 @@ common:
   url: https://x.com/imagineagi
 - type: CompanyProfile
   url: https://www.ycombinator.com/companies/imagine-ai
+- type: Product
+  name: Benchmark by Imagine AI
+  url: https://benchmark.imagineai.me/dashboard
+- type: Login
+  url: https://app.imagineai.me/sign-in
+- type: GitHubOrganization
+  url: https://github.com/imagine-ai-inc
+- type: Facebook
+  url: https://www.facebook.com/profile.php?id=61573966311744
+- type: Instagram
+  url: https://www.instagram.com/imagineagi/
+- type: Plans
+  url: plans/imagine-ai-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/imagine-ai-rate-limits.yml
+- type: LLMsTxt
+  url: llms/imagine-ai-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 4
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Imagine AI sells a seat-based managed content service and ships one free public
+    product (the Benchmark dashboard) — the only HTTP API on a host it controls is that
+    dashboard's own backend at benchmark.imagineai.me/api/*, which is Disallow'd in
+    robots.txt and answers 401 "Authentication required. Provide Authorization: Bearer
+    <token> or X-API-Key header." with no developer portal, reference or spec anywhere,
+    and api.imagineai.me / developer.imagineai.me do not resolve at all.
+  evidence:
+  - url: https://benchmark.imagineai.me/api/companies
+    status: 401
+  - url: https://benchmark.imagineai.me/robots.txt
+    status: 200
+  - url: https://www.imagineai.me/openapi.json
+    status: 404
+  - url: https://www.imagineai.me/.well-known/agent-card.json
+    status: 404
+  - url: https://app.imagineai.me/llms.txt
+    status: 307
+  checked: '2026-08-13'
+x-contract-discovery:
+  checked: '2026-08-13'
+  result: no first-party contract published
+  third_party_spec_found:
+    url: https://raw.githubusercontent.com/neelmajmudar/analytics-cli/HEAD/openapi.yaml
+    status: 200
+    title: LinkedIn Analytics API (OpenAPI 3.0.3, 32 operations)
+    describes: >-
+      the Imagine AI content-analytics backend reachable at analytics.imagineai.me (308 to
+      benchmark.imagineai.me); its stated auth — "Authorization: Bearer <API_SECRET_TOKEN>,
+      the server also accepts X-API-Key" — matches the live 401 body verbatim.
+    saved: false
+    reason: >-
+      NOT SAVED and NOT wired as type OpenAPI. STEP 0c ownership check fails: the document
+      is authored and served by a third-party personal GitHub repository, not by any host
+      Imagine AI controls; it carries no info.contact or info.termsOfService naming the
+      company, its servers[] default is http://localhost:3000, and its README instructs
+      operators to "paste token from 1Password" — an internal tool wrapping an internal
+      backend. Crediting it would award spec_presence for a contract the provider does not
+      publish. Recorded here as a lead for a future round if Imagine AI ever publishes it.
