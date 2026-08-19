@@ -1,0 +1,93 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.imagineai.me/pricing
+name: Imagine AI plans and pricing
+summary: >-
+  Imagine AI publishes a three-tier plan comparison on its public pricing page, but no
+  price is stated for any tier — every tier reads "Custom Quote" and routes to a
+  "Book a Demo" typeform. Billing period (Quarterly or Annual, "Save 20%" on annual)
+  and seat count are the two published axes, plus a stated one-time org setup fee. The
+  plans are seat-based content-service subscriptions, not API plans: there is no
+  metered API quota, no rate allowance, and no self-serve checkout.
+currency: null
+plan_count: 3
+billing:
+  periods:
+    - quarterly
+    - annual
+  annual_discount: '20%'
+  setup_fee: >-
+    "One-time org setup fee applies." — amount not published
+  self_serve_checkout: false
+  quote_required: true
+  quote_url: https://form.typeform.com/to/wexUi8lH
+plans:
+  - name: Standard
+    price: null
+    price_label: Custom Quote
+    currency: null
+    period: quarterly-or-annual
+    positioning: '"I need help with my content"'
+    seats: 1
+    seat_limit_note: 1 seat only — no additional seats
+    includes:
+      - Strategy + Post Calendar Delivery
+      - AI Agent Content Creation (unlimited)
+      - Agentic commenting to ICP and key leaders
+      - Advanced Analytics Dashboard (per post)
+      - Account Management & Cadence
+      - Dedicated content engineer
+      - Monthly content engineer strategy support
+    support:
+      response_time: 24 hours
+      channels: [slack, email]
+  - name: Growth
+    price: null
+    price_label: Custom Quote
+    currency: null
+    period: quarterly-or-annual
+    positioning: '"Our team wants to amplify each other"'
+    seats: 2-4
+    includes:
+      - Everything in Standard
+      - Campaign Coordination
+      - Team Strategy — 45-minute monthly group session
+      - Shared content calendar visibility
+      - Executive Visibility — cross-account analytics
+      - Ripple cadence coordination
+      - Cross-account amplification strategy
+    support:
+      response_time: 24 hours
+      channels: [slack, email]
+  - name: Scale
+    price: null
+    price_label: Custom Quote
+    currency: null
+    period: quarterly-or-annual
+    positioning: '"We need control + consistency at scale"'
+    seats: 5+
+    includes:
+      - Everything in Growth
+      - Content Governance — approval flows & audit trails
+      - Content Approval Flow System
+      - Brand voice guidelines enforcement
+      - Custom AI persona training per seat
+      - Company-wide messaging alignment
+      - Dedicated Customer Success Manager
+      - Bi-weekly strategy sessions
+    support:
+      response_time: same-day
+      channels: [slack, email]
+api_plans: false
+api_plans_note: >-
+  No API plan, API quota, developer tier or usage-based API pricing is published. Imagine
+  AI sells a seat-based managed content service; the only machine surface found on its own
+  hosts (benchmark.imagineai.me/api/*) is token-gated and undocumented.
+x-evidence:
+  - url: https://www.imagineai.me/pricing
+    status: 200
+    fetched: '2026-08-13'
+  - url: https://form.typeform.com/to/wexUi8lH
+    status: 200
+    fetched: '2026-08-13'
+    note: quote/demo request form linked from every plan CTA

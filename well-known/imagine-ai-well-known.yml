@@ -1,0 +1,73 @@
+generated: '2026-08-13'
+method: probed
+source: live GET of /.well-known/* and contract-discovery paths on every Imagine AI host
+summary: >-
+  Every /.well-known/ path returned 404 on every host Imagine AI controls. NO WellKnown
+  and NO SecurityTxt pointer is emitted for this provider — this file records a verified
+  absence, not a presence.
+hit_count: 0
+hosts:
+  - host: https://www.imagineai.me
+    platform: Vercel (Next.js marketing site)
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /.well-known/agent-card.json, status: 404}
+      - {path: /.well-known/agent.json, status: 404}
+      - {path: /llms.txt, status: 404}
+      - {path: /robots.txt, status: 404}
+      - {path: /sitemap.xml, status: 404}
+  - host: https://benchmark.imagineai.me
+    platform: Vercel (Next.js app — Benchmark dashboard; analytics.imagineai.me 308s here)
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/oauth-protected-resource, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /.well-known/agent-card.json, status: 404}
+      - {path: /.well-known/agent.json, status: 404}
+      - {path: /llms.txt, status: 404}
+      - {path: /robots.txt, status: 200, note: 'Allow / ; Disallow /api/ ; Disallow /pipeline'}
+      - {path: /sitemap.xml, status: 200, note: 832 URLs, all under /dashboard — no API or docs URL}
+  - host: https://app.imagineai.me
+    platform: Vercel (Next.js application)
+    note: >-
+      Every /.well-known/ path 307-redirects to https://app.imagineai.me/sign-in — the whole
+      host is behind an authentication gate, so nothing is served anonymously.
+    documents:
+      - {path: /.well-known/security.txt, status: 307}
+      - {path: /.well-known/agent-card.json, status: 307}
+      - {path: /.well-known/agent.json, status: 307}
+      - {path: /.well-known/oauth-authorization-server, status: 307}
+      - {path: /.well-known/openid-configuration, status: 307}
+      - {path: /llms.txt, status: 307}
+  - host: https://docs.imagineai.me
+    platform: Notion (CNAME external.notion.site)
+    ownership_warning: >-
+      NOT COUNTED AS AN IMAGINE AI HIT. This host is a Notion-served public site; its
+      /llms.txt (200, opens "Notion is the connected workspace...") and
+      /.well-known/security.txt (200, "Contact: https://www.notion.so/Responsible-Disclosure-Policy")
+      are NOTION's documents served on a CNAMEd subdomain, not documents Imagine AI
+      authored or serves. Its /sitemap.xml lists only www.notion.so URLs and its root
+      renders Notion's own marketing page (<title>Notion</title>). Crediting these to
+      Imagine AI would be a platform-tenancy false positive.
+    documents:
+      - {path: /llms.txt, status: 200, owner: notion, counted: false}
+      - {path: /.well-known/security.txt, status: 200, owner: notion, counted: false}
+      - {path: /.well-known/agent-card.json, status: 404}
+      - {path: /.well-known/agent.json, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /openapi.json, status: 404}
+      - {path: /sitemap.xml, status: 200, owner: notion, counted: false}
+  - host: https://api.imagineai.me
+    documents:
+      - {path: /, status: 0, note: no DNS record — host does not resolve}
+  - host: https://developer.imagineai.me
+    documents:
+      - {path: /, status: 0, note: no DNS record — host does not resolve}

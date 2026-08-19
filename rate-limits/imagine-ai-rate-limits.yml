@@ -1,0 +1,40 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.imagineai.me/
+name: Imagine AI rate limits
+summary: >-
+  Imagine AI publishes no rate limits. There is no developer portal, API reference or
+  documentation site on any host the company controls, so there is nothing to read a
+  limit, window, burst or response header from. The only machine surface found on a
+  company-controlled host is the Benchmark dashboard backend at
+  benchmark.imagineai.me/api/*, which is disallowed in robots.txt and answers 401 with a
+  bearer-token challenge before any limit can be observed on an unauthenticated response.
+limit_count: 0
+limits: []
+headers:
+  documented: []
+  observed: []
+  note: >-
+    No X-RateLimit-*, RateLimit-* or Retry-After header was observed on any response from
+    a company host. The 401 from benchmark.imagineai.me/api/companies carried none.
+exhaustion_status: null
+docs: null
+x-evidence:
+  - url: https://www.imagineai.me/
+    status: 200
+    fetched: '2026-08-13'
+    note: marketing site; no developer or API section in nav or footer
+  - url: https://www.imagineai.me/pricing
+    status: 200
+    fetched: '2026-08-13'
+    note: three seat-based tiers, no API quota or usage allowance published
+  - url: https://benchmark.imagineai.me/api/companies
+    status: 401
+    fetched: '2026-08-13'
+    note: >-
+      body: {"error":"Authentication required. Provide Authorization: Bearer <token> or
+      X-API-Key header."} — no rate-limit headers returned
+  - url: https://benchmark.imagineai.me/robots.txt
+    status: 200
+    fetched: '2026-08-13'
+    note: 'Disallow: /api/'
