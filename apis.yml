@@ -47,6 +47,7 @@ accessModel:
   source:
   - https://www.imagineai.me/pricing
   - https://form.typeform.com/to/wexUi8lH
+  - {url: 'https://www.imagineai.me/', status: 301, note: 'declared website redirects to https://useimagine.ai/ — a different registrable domain (imagineai.me -> useimagine.ai), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
   generated: '2026-08-13'
   method: searched
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/imagine-ai.png
