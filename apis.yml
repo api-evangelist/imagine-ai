@@ -61,7 +61,7 @@ tags:
 - Content Marketing
 - LinkedIn
 - Thought Leadership
-- Social-Media
+- Social Media
 - Lead Generation
 - Personas
 - Y Combinator
@@ -79,6 +79,7 @@ tags_raw:
 - Persona
 - Y Combinator
 - SaaS
+- Social-Media
 apis: []
 common:
 - type: DomainSecurity
