@@ -64,6 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Imagine Ai is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Imagine AI (YC F25) is a San Francisco B2B content platform, founded in 2025 by Neo Lee and Sky Yang, that reverse-engineers modern B2B growth starting with LinkedIn. It builds a persona-driven AI clone of a founder or executive by deeply analyzing their writing, speaking style, and market context, then uses that persona to plan content strategy, write LinkedIn posts, draft comments and DMs, and schedule coordinated distribution across an executive team (CEO, VP of Sales, Head of Marketing) from a single shared content calendar. Each client is paired with a dedicated content engineer, and the platform tracks engagement-quality analytics and inbound lead generation; early customers include MongoDB, Rippling, and Conduit. It also publishes Benchmark by Imagine AI, a free public LinkedIn competitor-benchmark dashboard covering 96 companies and 32,500+ analyzed posts with a documented statistical methodology. Imagine AI is a sales-led SaaS — three seat-based tiers, every one a custom quote — with no developer portal, API reference, SDK, MCP server or OpenAPI/AsyncAPI/GraphQL definition published on any host it controls as of August 2026; this profile captures the company's identity and public web properties for the API Evangelist network.
 
-Backed by: y-combinator
+**Areas:** Company · Artificial Intelligence · B2B · Content Marketing · LinkedIn · Thought Leadership · Social Media · Lead Generation · Personas · Y Combinator · Software-as-a-Service
+
+## Imagine Ai on APIs.io
+
+Everything profiled for Imagine Ai is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/imagine-ai/](https://apis.io/providers/imagine-ai/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Imagine Ai Domain Security](https://apis.io/security/imagine-ai/imagine-ai-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Imagine Ai Plans Pricing](https://apis.io/plans/imagine-ai/imagine-ai-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Imagine Ai Rate Limits](https://apis.io/rate-limits/imagine-ai/imagine-ai-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.imagineai.me/)
+- [Pricing](https://www.imagineai.me/pricing)
+- [Blog](https://www.imagineai.me/blog)
+- [Terms of service](https://www.imagineai.me/user-agreement)
+- [Privacy policy](https://www.imagineai.me/privacy-policy)
+- [GitHub](https://github.com/imagine-ai-inc)
+
+## API Evangelist rating
+
+**Kin Score 19.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 69.7 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 12.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/imagine-ai/](https://apis.io/providers/imagine-ai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Imagine Ai: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/imagine-ai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
